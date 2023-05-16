@@ -18,7 +18,7 @@ function incrementWrongAnswer() {
 
 }
 
-function displayAdditonQuestion() {
+function displayAdditionQuestion() {
 
 }
 
@@ -27,5 +27,5 @@ function displaySubtractQuestion() {
 }
 
 function displayMultiplyQuestion() {
-    
+
 }
