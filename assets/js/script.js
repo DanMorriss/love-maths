@@ -1,6 +1,5 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
-
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -14,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
+    //Event listener for enter key to check answer
+   document.getElementById('answer-box').addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        checkAnswer();
+    }
+   })
 
     runGame("addition");
 
@@ -24,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
  * and after the user's answer has been processed
 */
 function runGame(gameType) {
+
+    //Empties answer box of any previous answer
+    document.getElementById("answer-box").value = "";
+    //Put the cursor for the answer in the answer box
+    document.getElementById("answer-box").focus();
 
     //Create two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25 +1);
